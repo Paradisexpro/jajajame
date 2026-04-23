@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เรื่องสอนใจหญิง</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: #fff;
+  font-size: 18px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #ff3d00, #ff9800, #ff3d00);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* 🔥 TABS (รองรับมือถือ) */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;        /* เลื่อนในมือถือ */
+  padding-bottom: 5px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab-btn {
+  flex: 0 0 auto;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: #ff9800;
+  color: #000;
+  font-weight: bold;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
+  display: none;
+  animation: ride 0.5s ease;
+}
+
+.card.active {
+  display: block;
+}
+
+@keyframes ride {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffcc80;
+}
+
+.card p {
+  line-height: 2.2;
+  text-align: justify;
+  text-indent: 2em;
+  color: #e5e7eb;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background: #0b1220;
+  color: #aaa;
+}
+
+/* 🔥 RESPONSIVE (มือถือ) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 2;
+  }
+}
+
+/* 🔥 iPad */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    padding: 35px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎢 เรื่องสอนใจหญิง</h1>
+  <p>รถไฟเหาะของความสัมพันธ์</p>
+</header>
+
+<div class="container">
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab(0)">จุดเริ่ม</button>
+    <button class="tab-btn" onclick="openTab(1)">แบบแรก</button>
+    <button class="tab-btn" onclick="openTab(2)">แบบสอง</button>
+    <button class="tab-btn" onclick="openTab(3)">แบบสาม</button>
+    <button class="tab-btn" onclick="openTab(4)">แบบสี่</button>
+  </div>
+
+  <div class="card active">
+    <h2>บทนำ</h2>
+    <p>
+      ประสบการณ์ความรักบางครั้งเหมือนรถไฟเหาะ ขึ้นสุด ลงสุด 
+      จนบางครั้งแทบแยกไม่ออกว่าอะไรคือความจริง หรือแค่ความรู้สึกชั่วคราว
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>รถไฟเหาะซิ่ง</h2>
+    <p>
+           ตอนเริ่มเหมือนทุกอย่างใช่ไปหมด ทุ่มเทเกินร้อย ทำให้รู้สึกพิเศษแบบที่ไม่เคยเจอ แต่พอเวลาผ่านไป ความชัดเจนกลับค่อย ๆ จางหาย เหลือไว้แค่คำถามว่ามันเกิดอะไรขึ้น 
+
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>รถไฟเหาะแห่งความหวัง</h2>
+    <p>
+      พูดเก่ง ทำให้เชื่อเก่ง แต่ไม่เคยมีคำตอบที่ชัดเจน อยู่ในสถานะที่ไปต่อก็ไม่ได้ จะถอยก็ไม่สุด เหมือนถูกแขวนไว้กลางอากาศ 
+
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>รถไฟเหาะเปลี่ยนสี</h2>
+    <p>
+      หายไปบ้าง กลับมาบ้าง พอจะตัดใจก็กลับมาทำดี จนอีกฝ่ายเริ่มสับสนว่าสิ่งไหนคือ “ตัวจริง” ของเขา 
+
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>รถไฟเหาะหลายราง</h2>
+    <p>
+         ไม่เคยเลือกใครจริงจัง ทิ้งพื้นที่ให้ความไม่แน่นอนไว้เสมอ เหมือนมีเรา…แต่ก็ไม่เคยมีแค่เรา บางครั้ง 
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p>จัดทำโดย งูดินเจ้าที่ © 2026</p>
+</footer>
+
+<script>
+function openTab(index) {
+  let cards = document.querySelectorAll(".card");
+  let buttons = document.querySelectorAll(".tab-btn");
+
+  cards.forEach((c, i) => {
+    c.classList.remove("active");
+    buttons[i].classList.remove("active");
+  });
+
+  cards[index].classList.add("active");
+  buttons[index].classList.add("active");
+}
+</script>
+
+</body>
+</html>
